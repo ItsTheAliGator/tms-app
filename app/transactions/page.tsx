@@ -1,5 +1,6 @@
 import AuthButton from "@/components/AuthButton";
-import Transactions from "./transactionsTable";
+import TransactionsTable from "./transactionsTable";
+import BackButton from "../../components/backButton";
 
 export default async function Index() {
 	return (
@@ -8,9 +9,10 @@ export default async function Index() {
 				<div className="w-full max-w-4xl flex justify-between items-center p-3 text-sm">{<AuthButton />}</div>
 			</nav>
 
-			<div className="flex-1 flex flex-col">
-				<main className="flex-1 flex gap-6 px-3">
-					<Transactions />
+			<div className="flex-1 flex">
+				<main className="flex-1 flex flex-col gap-6 px-3">
+					<BackButton />
+					<TransactionsTable />
 				</main>
 			</div>
 

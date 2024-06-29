@@ -5,7 +5,7 @@ import "./style.css";
 import "./primereact-styles.css";
 import NetTransactions from "@/components/NetTransactions";
 import DailyNumberTransactions from "@/components/DailyNumberTransactions";
-import TransactionButton from "@/components/TransactionsButton";
+import TransactionButton from "@/components/transactionsButton";
 
 export default async function Index() {
 	return (

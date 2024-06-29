@@ -29,7 +29,7 @@ export default async function NetTransactions() {
 		return <p className="m-0">Please log in to see your daily transactions.</p>;
 	};
 
-	return (
+	return user ? (
 		<Card
 			title="Net transactions"
 			subTitle="Your accumulated transactions"
@@ -44,5 +44,5 @@ export default async function NetTransactions() {
 			}}>
 			{user ? usersNetTransactions() : unauthorizedUser()}
 		</Card>
-	);
+	) : null;
 }

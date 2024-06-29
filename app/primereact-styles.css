@@ -22,3 +22,37 @@
 .widget-card-content {
     color: rgb(255, 255, 255);
 }
+
+/* The styling for the transaction button that redirects to the transaction page */
+.transaction-button-root {
+    background: rgb(255, 255, 255);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+    border-color: rgb(255, 255, 255);
+}
+
+.transaction-button-label {
+    color: rgb(0, 0, 0);
+}
+
+.transaction-button-loading-icon {
+    color: rgb(0, 0, 0);
+}
+
+.transaction-button-icon {
+    color: rgb(0, 0, 0);
+}
+
+/* The styling for back button */
+.back-button-root {
+    background: rgb(255, 255, 255);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+    border-color: rgb(255, 255, 255);
+}
+
+.back-button-label {
+    color: rgb(0, 0, 0);
+}
+
+.back-button-icon {
+    color: rgb(0, 0, 0);
+}

@@ -33,7 +33,7 @@ export default async function DailyNumberTransactions() {
 		return <p className="m-0">Please log in to see your daily transactions.</p>;
 	};
 
-	return (
+	return user ? (
 		<Card
 			title="Daily transactions"
 			subTitle="Number of transactions for today"
@@ -48,5 +48,5 @@ export default async function DailyNumberTransactions() {
 			}}>
 			{user ? usersDailyTransactions() : unauthorizedUser()}
 		</Card>
-	);
+	) : null;
 }
