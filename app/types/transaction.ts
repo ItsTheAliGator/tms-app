@@ -1,8 +1,8 @@
 export interface Transaction {
+    id: number
     created_at?: string
-    date?: string
+    date: string
     description?: string
-    id?: number
     title?: string
-    total_amount?: number
+    total_amount: number
 }
