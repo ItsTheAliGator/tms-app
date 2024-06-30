@@ -7,7 +7,7 @@ import { navigateToTransactionsPage } from "./actions";
 import { createClient } from "@/utils/supabase/client";
 import { useEffect, useState } from "react";
 
-export default function TransactionButton() {
+export default function TransactionsButton() {
 	const [userIsLoggedIn, setUserIsLoggedIn] = useState<boolean>();
 
 	useEffect(() => {

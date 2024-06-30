@@ -4,6 +4,7 @@ import "./style.css";
 import "./primereact-styles.css";
 import NetTransactions from "@/components/NetTransactions";
 import DailyNumberTransactions from "@/components/DailyNumberTransactions";
+import TransactionsButton from "@/components/transactionsButton";
 
 export default async function Index() {
 	return (
@@ -19,6 +20,7 @@ export default async function Index() {
 						<NetTransactions />
 						<DailyNumberTransactions />
 					</div>
+					<TransactionsButton />
 				</main>
 			</div>
 
