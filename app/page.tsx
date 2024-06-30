@@ -1,10 +1,10 @@
-import AuthButton from "../components/AuthButton";
-import Header from "@/components/Header";
 import "./style.css";
 import "./primereact-styles.css";
-import NetTransactions from "@/components/NetTransactions";
-import DailyNumberTransactions from "@/components/DailyNumberTransactions";
-import TransactionsButton from "@/app/transactionsButton";
+import NetTransactions from "@/components/netTransactions";
+import DailyNumberTransactions from "@/components/dailyNumberTransactions";
+import TransactionsButton from "@/components/transactionsButton";
+import AuthButton from "@/components/authButton";
+import Header from "@/components/header";
 
 export default async function Index() {
 	return (

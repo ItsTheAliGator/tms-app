@@ -26,20 +26,20 @@ let emptyTransaction: Transaction = {
 };
 
 export default function TransactionsTable() {
-	const [transactions, setTransactions] = useState<Transaction[]>([]); // Create a state to store the transactions
-	const [selectedTransactions, setSelectedTransactions] = useState<Transaction[]>([]); // Create a state to store the selected transactions
-	const [globalFilter, setGlobalFilter] = useState<string>(""); // Create a state to store the global filter
-	const toast = useRef<Toast>(null); // Create a ref to the toast component
-	const dt = useRef<DataTable<Transaction[]>>(null); // Create a ref to the datatable component
-	const [deleteTransactionsDialog, setDeleteTransactionsDialog] = useState<boolean>(false); // Create a state to store the delete transactions dialog visibility
-	const [deleteTransactionDialog, setDeleteTransactionDialog] = useState<boolean>(false); // Create a state to store the delete transactions dialog visibility
-	const [transactionDialog, setTransactionDialog] = useState<boolean>(false); // Create a state to store the transaction dialog visibility
-	const [transaction, setTransaction] = useState<Transaction>(emptyTransaction); // Create a state to store the transaction
-	const [submitted, setSubmitted] = useState<boolean>(false); // Create a state to store the submitted status
+	const [transactions, setTransactions] = useState<Transaction[]>([]); // Creating a state to store the transactions
+	const [selectedTransactions, setSelectedTransactions] = useState<Transaction[]>([]); // Creating a state to store the selected transactions
+	const [globalFilter, setGlobalFilter] = useState<string>(""); // Creating a state to store the global filter
+	const toast = useRef<Toast>(null); // Creating a ref to the toast component
+	const dt = useRef<DataTable<Transaction[]>>(null); // Creating a ref to the datatable component
+	const [deleteTransactionsDialog, setDeleteTransactionsDialog] = useState<boolean>(false); // Creating a state to store the delete transactions dialog visibility
+	const [deleteTransactionDialog, setDeleteTransactionDialog] = useState<boolean>(false); // Creating a state to store the delete transactions dialog visibility
+	const [transactionDialog, setTransactionDialog] = useState<boolean>(false); // Creating a state to store the transaction dialog visibility
+	const [transaction, setTransaction] = useState<Transaction>(emptyTransaction); // Creating a state to store the transaction
+	const [submitted, setSubmitted] = useState<boolean>(false); // Creating a state to store the submitted status
 	const [date, setDate] = useState<Nullable<Date>>(null);
 
 	useEffect(() => {
-		getTransactions().then((data) => setTransactions(data)); // Fetch the transactions and set the state
+		getTransactions().then((data) => setTransactions(data)); // Fetching the transactions and set the state
 	}, []);
 
 	const formatDate = (value: Date) => {

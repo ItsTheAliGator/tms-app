@@ -6,7 +6,7 @@ import { redirect } from 'next/navigation'
  * Navigates to the transactions page.
  * @returns {Promise<void>} A promise that resolves when the navigation is complete.
  */
-export async function navigateToTransactionsPage() {
+export async function navigateToTransactionsPage(): Promise<void> {
     redirect(`/transactions`)
 }
 

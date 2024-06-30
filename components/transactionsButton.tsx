@@ -3,7 +3,7 @@
 //Here the button redirects user to the transactions page.
 
 import { Button } from "primereact/button";
-import { navigateToTransactionsPage } from "../components/actions";
+import { navigateToTransactionsPage } from "./actions";
 import { createClient } from "@/utils/supabase/client";
 import { useEffect, useState } from "react";
 
