@@ -3,7 +3,7 @@ import "./style.css";
 import "./primereact-styles.css";
 import NetTransactions from "@/components/netTransactions";
 import DailyNumberTransactions from "@/components/dailyNumberTransactions";
-import TransactionsButton from "@/app/transactionsButton";
+import TransactionsButton from "@/components/transactionsButton";
 import AuthButton from "@/components/authButton";
 
 export default async function Index() {
