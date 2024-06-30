@@ -1,5 +1,5 @@
 import { createClient } from "@/utils/supabase/server";
-import AuthButton from "./AuthButton";
+import AuthButton from "./authButton";
 
 export default async function Header() {
 	const supabase = createClient();

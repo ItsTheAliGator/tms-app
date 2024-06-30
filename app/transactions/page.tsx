@@ -1,4 +1,4 @@
-import AuthButton from "@/components/AuthButton";
+import AuthButton from "@/components/authButton";
 import TransactionsTable from "./transactionsTable";
 import BackButton from "../../components/backButton";
 

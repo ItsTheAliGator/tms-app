@@ -1,7 +1,6 @@
 'use server';
 import { createClient } from '@/utils/supabase/server';
 import { Transaction } from '../types/transaction';
-import { redirect } from 'next/navigation';
 
 /**
  * Retrieves a list of transactions from the server.
@@ -23,6 +22,8 @@ export async function getTransactions(): Promise<Transaction[]> {
  * @throws {Error} If there is an error creating the transaction.
  */
 export async function createTransaction(transaction: Transaction): Promise<{ created: boolean, transaction: Transaction }> {
+
+    // By using select and returns, we can get the created transaction back from the server. Sinlge returns a single object.
     const { error, data } = await createClient().from("transactions").insert([transaction]).select().returns<Transaction>().single();
     if (error) {
         return { created: false, transaction: transaction }

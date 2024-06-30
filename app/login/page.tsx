@@ -10,7 +10,7 @@ export default function Login({ searchParams }: { searchParams: { message: strin
 		const email = formData.get("email") as string;
 		const supabase = createClient();
 
-		const defaultUrl = process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000";
+		const defaultUrl = process.env.VERCEL_URL;
 
 		const { error } = await supabase.auth.signInWithOtp({
 			email,
