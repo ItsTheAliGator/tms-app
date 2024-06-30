@@ -3,11 +3,11 @@
 //Here the button redirects user to the transactions page.
 
 import { Button } from "primereact/button";
-import { navigateToTransactionsPage } from "./actions";
+import { navigateToTransactionsPage } from "../components/actions";
 import { createClient } from "@/utils/supabase/client";
 import { useEffect, useState } from "react";
 
-export default function TransactionButton() {
+export default function TransactionsButton() {
 	const [userIsLoggedIn, setUserIsLoggedIn] = useState<boolean>();
 
 	useEffect(() => {

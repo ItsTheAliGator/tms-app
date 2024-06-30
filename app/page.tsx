@@ -1,11 +1,10 @@
 import AuthButton from "../components/AuthButton";
-import { createClient } from "@/utils/supabase/server";
 import Header from "@/components/Header";
 import "./style.css";
 import "./primereact-styles.css";
 import NetTransactions from "@/components/NetTransactions";
 import DailyNumberTransactions from "@/components/DailyNumberTransactions";
-import TransactionButton from "@/components/transactionsButton";
+import TransactionsButton from "@/app/transactionsButton";
 
 export default async function Index() {
 	return (
@@ -21,7 +20,7 @@ export default async function Index() {
 						<NetTransactions />
 						<DailyNumberTransactions />
 					</div>
-					<TransactionButton />
+					<TransactionsButton />
 				</main>
 			</div>
 
