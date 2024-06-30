@@ -15,7 +15,6 @@ export default function Login({ searchParams }: { searchParams: { message: strin
 		const { error } = await supabase.auth.signInWithOtp({
 			email,
 			options: {
-				shouldCreateUser: false,
 				emailRedirectTo: defaultUrl,
 			},
 		});
