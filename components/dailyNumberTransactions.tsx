@@ -16,6 +16,7 @@ export default async function DailyNumberTransactions() {
 	});
 
 	let testDate = new Date().toString();
+	const currentLocale = process.env.LOCALE ? process.env.LOCALE : process.env.VERCEL_REGION;
 
 	const transactions = await getTransactions();
 	const todayTransactions = transactions.filter((transaction) => {
@@ -49,6 +50,7 @@ export default async function DailyNumberTransactions() {
 				Number of transactions today: <strong>{todayTransactions.length}</strong>
 				<p>
 					{testDate} {testToday}
+					{currentLocale}
 				</p>
 			</p>
 		);
