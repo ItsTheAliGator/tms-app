@@ -9,9 +9,22 @@ import "./../app/primereact-styles.css";
 
 export default async function DailyNumberTransactions() {
 	const supabase = createClient();
+	const testToday = new Date().toLocaleDateString("en-NL", {
+		year: "numeric",
+		month: "numeric",
+		day: "numeric",
+	});
+
+	let testDate = new Date().toString();
 
 	const transactions = await getTransactions();
 	const todayTransactions = transactions.filter((transaction) => {
+		testDate = new Date(transaction.date).toLocaleDateString("en-NL", {
+			year: "numeric",
+			month: "numeric",
+			day: "numeric",
+		});
+
 		const transactionDate = new Date(transaction.date).toLocaleDateString("en-NL", {
 			year: "numeric",
 			month: "numeric",
@@ -34,6 +47,9 @@ export default async function DailyNumberTransactions() {
 		return (
 			<p className="m-0">
 				Number of transactions today: <strong>{todayTransactions.length}</strong>
+				<p>
+					{testDate} {testToday}
+				</p>
 			</p>
 		);
 	};
