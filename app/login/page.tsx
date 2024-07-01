@@ -25,23 +25,6 @@ export default function Login({ searchParams }: { searchParams: { message: strin
 		redirect("/");
 	};
 
-	const signUp = async (formData: FormData) => {
-		"use server";
-		const supabase = createClient();
-
-		const { error } = await supabase.auth.signUp({
-			email: formData.get("email") as string,
-			password: formData.get("password") as string,
-		});
-
-		if (error) {
-			return redirect("/error");
-		}
-
-		revalidatePath("/", "layout");
-		redirect("/");
-	};
-
 	return (
 		<div className="flex-1 flex flex-col w-full px-8 sm:max-w-md justify-center gap-2">
 			<div className="absolute left-8 top-8 py-2 px-4 rounded-md no-underline text-foreground bg-btn-background hover:bg-btn-background-hover flex items-center group text-sm">
@@ -63,10 +46,6 @@ export default function Login({ searchParams }: { searchParams: { message: strin
 
 				<SubmitButton formAction={login} className="bg-green-700 md:w-40 rounded-md py-2 w-full text-foreground mb-2" pendingText="Signing In...">
 					Log in
-				</SubmitButton>
-
-				<SubmitButton formAction={signUp} className="bg-green-700 md:w-40 rounded-md py-2 w-full text-foreground mb-2" pendingText="Signing In...">
-					Sign up
 				</SubmitButton>
 
 				{searchParams?.message && <p className="mt-4 p-4 bg-foreground/10 text-foreground text-center">{searchParams.message}</p>}
