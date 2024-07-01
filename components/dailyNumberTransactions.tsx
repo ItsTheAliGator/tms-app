@@ -21,18 +21,21 @@ export default async function DailyNumberTransactions() {
 	const transactions = await getTransactions();
 	const todayTransactions = transactions.filter((transaction) => {
 		testDate = new Date(transaction.date).toLocaleDateString("en-NL", {
+			timeZone: "Europe/Amsterdam",
 			year: "numeric",
 			month: "numeric",
 			day: "numeric",
 		});
 
 		const transactionDate = new Date(transaction.date).toLocaleDateString("en-NL", {
+			timeZone: "Europe/Amsterdam",
 			year: "numeric",
 			month: "numeric",
 			day: "numeric",
 		});
 
 		const today = new Date().toLocaleDateString("en-NL", {
+			timeZone: "Europe/Amsterdam",
 			year: "numeric",
 			month: "numeric",
 			day: "numeric",
