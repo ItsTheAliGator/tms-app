@@ -12,9 +12,18 @@ export default async function DailyNumberTransactions() {
 
 	const transactions = await getTransactions();
 	const todayTransactions = transactions.filter((transaction) => {
-		const transactionDate = new Date(transaction.date);
-		const today = new Date();
-		return transactionDate.getDate() === today.getDate() && transactionDate.getMonth() === today.getMonth() && transactionDate.getFullYear() === today.getFullYear();
+		const transactionDate = new Date(transaction.date).toLocaleDateString("en-NL", {
+			year: "numeric",
+			month: "numeric",
+			day: "numeric",
+		});
+
+		const today = new Date().toLocaleDateString("en-NL", {
+			year: "numeric",
+			month: "numeric",
+			day: "numeric",
+		});
+		return transactionDate === today;
 	});
 
 	const {
