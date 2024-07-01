@@ -14,7 +14,7 @@ The application is built using the following technologies:
 
 ## Authentication
 
-The application uses Supabase for authentication. Users have to be invited to the application by the admin. Authentication is done using magic links. Users can sign in using their email address. There is no password required. There is a limit of 30 login requests per hour.
+The application uses Supabase for authentication. Users have to be invited to the application by the admin. Authentication is done using email and password.
 
 ## Data ownership
 
